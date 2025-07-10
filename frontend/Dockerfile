@@ -6,6 +6,9 @@ ENV NODE_ENV=development
 
 WORKDIR /app
 
+# 增加文件监视器限制以解决ENOSPC错误
+RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
+
 # 复制package文件以利用Docker缓存
 COPY package*.json ./
 
