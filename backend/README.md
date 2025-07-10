@@ -12,6 +12,16 @@ pip install -r requirements.txt
 
 ## 2. 配置环境变量
 
+1. **自动加载环境变量**
+
+将 `.env.example` 文件复制并重命名为 `.env`，然后填写完整的环境变量配置。
+
+**注意：** 程序会自动读取`.env`中变量，如需手动加载，可以在项目根目录下运行：
+```bash
+source .env
+```
+
+2. **手动导出环境变量**：
 
 ```bash
 export MODEL_ID=xxxx
